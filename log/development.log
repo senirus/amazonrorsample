@@ -2975,3 +2975,69 @@ Completed 200 OK in 22ms (Views: 19.3ms | ActiveRecord: 0.3ms | Allocations: 548
   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
   [1m[36mMicropost Load (0.1ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts" WHERE "microposts"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
   [1m[36mMicropost Load (0.2ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts" WHERE "microposts"."user_id" = ? ORDER BY "microposts"."id" ASC LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+Started GET "/static_pages/home" for ::1 at 2023-09-12 17:22:04 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 88)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 10984)
+
+
+Started GET "/static_pages/home" for ::1 at 2023-09-12 17:28:35 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 87)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 6546)
+
+
+Started GET "/static_pages/home" for ::1 at 2023-09-12 17:33:04 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb
+  Rendered static_pages/home.html.erb (Duration: 0.2ms | Allocations: 95)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 1818)
+
+
+Started GET "/static_pages/home" for ::1 at 2023-09-12 17:38:51 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb
+  Rendered static_pages/home.html.erb (Duration: 0.6ms | Allocations: 99)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 1820)
+
+
+Started GET "/static_pages/home" for ::1 at 2023-09-12 17:38:51 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb
+  Rendered static_pages/home.html.erb (Duration: 0.1ms | Allocations: 4)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 504)
+
+
+Started GET "/static_pages/home" for ::1 at 2023-09-12 17:38:52 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb
+  Rendered static_pages/home.html.erb (Duration: 0.1ms | Allocations: 4)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 503)
+
+
+Started GET "/static_pages/home" for ::1 at 2023-09-12 17:39:00 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb
+  Rendered static_pages/home.html.erb (Duration: 0.8ms | Allocations: 114)
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 0.0ms | Allocations: 1833)
+
+
+Started GET "/static_pages/home" for ::1 at 2023-09-12 17:39:01 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb
+  Rendered static_pages/home.html.erb (Duration: 0.1ms | Allocations: 7)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 512)
+
+
+Started GET "/static_pages/home" for ::1 at 2023-09-12 17:39:01 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb
+  Rendered static_pages/home.html.erb (Duration: 0.1ms | Allocations: 7)
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 506)
+
+
