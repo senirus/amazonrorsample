@@ -6472,3 +6472,115 @@ Processing by StaticPagesController#home as HTML
 Completed 200 OK in 34ms (Views: 32.0ms | ActiveRecord: 0.1ms | Allocations: 16945)
 
 
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddRememberDigestToUsers (20230921020909)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "remember_digest" varchar[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230921020909"]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/login" for ::1 at 2023-09-21 08:42:13 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 14.1ms | Allocations: 5826)
+  Rendered layouts/_shim.html.erb (Duration: 0.4ms | Allocations: 96)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:18:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 10.7ms | Allocations: 7429)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 187)
+Completed 200 OK in 1125ms (Views: 1116.6ms | ActiveRecord: 0.8ms | Allocations: 1700102)
+
+
+Started POST "/login" for ::1 at 2023-09-21 08:42:30 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"ZEFIDxBT2WOqVYcJ87XY4rQfYzMVKs8ddJAlOOOIdevUvhd7JzKMuNOJrBaRun0d/kwRelG+/16QGTPNYVuG8w==", "session"=>{"email"=>"example@railstutorial.org", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "{\"email\"=>\"example@railstutorial.org\", \"password\"=>\"123456\", \"remember_me\"=>\"1\"}"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 27.9ms | Allocations: 567)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 6)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:18:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 723)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+Completed 200 OK in 47ms (Views: 40.7ms | ActiveRecord: 0.5ms | Allocations: 17843)
+
+
+Started GET "/" for ::1 at 2023-09-21 08:52:13 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 835)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 6)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:18:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.3ms | Allocations: 5944)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 51)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.1ms | Allocations: 22924)
+
+
+Started GET "/signup" for ::1 at 2023-09-21 08:52:15 +0530
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1393)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 6)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:18:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 724)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 51)
+Completed 200 OK in 27ms (Views: 22.9ms | ActiveRecord: 0.1ms | Allocations: 18391)
+
+
+Started GET "/about" for ::1 at 2023-09-21 08:52:17 +0530
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (Duration: 2.0ms | Allocations: 115)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 6)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:18:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.9ms | Allocations: 734)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 51)
+Completed 200 OK in 45ms (Views: 42.1ms | ActiveRecord: 0.2ms | Allocations: 16625)
+
+
+Started GET "/contact" for ::1 at 2023-09-21 08:52:19 +0530
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 1.3ms | Allocations: 108)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 6)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:18:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 750)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 51)
+Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 0.1ms | Allocations: 16669)
+
+
+Started GET "/help" for ::1 at 2023-09-21 08:52:20 +0530
+Processing by StaticPagesController#help as HTML
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 1.6ms | Allocations: 111)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 6)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:18:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.5ms | Allocations: 750)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 51)
+Completed 200 OK in 27ms (Views: 23.7ms | ActiveRecord: 0.1ms | Allocations: 16675)
+
+
+Started GET "/" for ::1 at 2023-09-21 08:52:23 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3.9ms | Allocations: 681)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 6)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:18:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.6ms | Allocations: 716)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+Completed 200 OK in 39ms (Views: 36.7ms | ActiveRecord: 0.1ms | Allocations: 16937)
+
+
