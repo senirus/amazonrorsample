@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_09_21_020909) do
+ActiveRecord::Schema.define(version: 2023_09_21_065343) do
 
   create_table "microposts", force: :cascade do |t|
     t.text "content"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2023_09_21_020909) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "password_digest"
     t.string "remember_digest"
+    t.boolean "admin", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
